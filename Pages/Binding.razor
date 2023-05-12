@@ -1,0 +1,7 @@
+﻿@page "/binding"
+<h3>Binding</h3>
+<input @bind-value="Firstname" @bind-value:event="oninput" />
+<h3>@Firstname</h3>
+@code {
+    public string Firstname { get; set; } = "Didar";
+}

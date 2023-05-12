@@ -1,0 +1,19 @@
+﻿@page "/student"
+<button class=" btn btn-primary" @onclick="@Save">Kaydet Ana component</button>
+<h3>Student List</h3>
+<h5>@StudentList</h5>
+<StudentDetail StudentName="Didar" OnClick="@Save"></StudentDetail>
+<h5 >@saveMessage</h5>
+@code {
+    public string StudentList { get; set; }
+    private string saveMessage;
+    protected override async Task OnInitializedAsync()
+    {
+        StudentList = "Didar Shohrat Cynar";
+    }
+    private void Save (MouseEventArgs e)
+    {
+        saveMessage = "kaydedildi";
+    }
+
+}
